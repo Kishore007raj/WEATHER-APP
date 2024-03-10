@@ -1,0 +1,323 @@
+CSS CODE LINE-LINE FULL EXPLANATION
+
+STEP-1-ADDING A BG AND ALSO A BOX-LIKE CONTAINER 
+
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    background: url("weather images/neon.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    width: 400px;
+    height: 120px;
+    color: white;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 21px;
+    position: relative;
+    transition: height .3s ease;
+}
+
+
+
+let's break down the CSS code:
+
+1. `*`: This is a universal selector, meaning it selects all elements on the page.
+
+2. `font-family: Arial, sans-serif;`: This sets the font family for all elements to Arial, or if Arial is not available, to a generic sans-serif font.
+
+3. `box-sizing: border-box;`: This ensures that padding and border are included in the element's total width and height.
+
+4. `padding: 0px;` and `margin: 0;`: These reset the default padding and margin for all elements to 0, ensuring consistent spacing throughout the page.
+
+5. `body`: Styles applied to the body element.
+
+   - `display: flex;`: Makes the body a flex container, allowing its children elements to be flex items.
+   - `background`: Sets the background of the body to a specified image file located in the "weather images" folder. The `url()` function is used to specify the image file path.
+   - `background-size: cover;`: Ensures the background image covers the entire body element.
+   - `background-position: center;`: Positions the background image at the center of the body element.
+   - `min-height: 100vh;`: Sets the minimum height of the body to 100% of the viewport height, ensuring the background image covers the entire viewport.
+   - `justify-content: center;` and `align-items: center;`: Centers the content horizontally and vertically within the body.
+   - `margin: 0;`: Resets the margin of the body to 0.
+
+6. `.container`: Styles applied to elements with the class "container".
+
+   - `background`: Sets a semi-transparent white background color using RGBA values.
+   - `width: 400px;` and `height: 120px;`: Sets the width and height of the container.
+   - `color: white;`: Sets the text color to white.
+   - `backdrop-filter: blur(15px);`: Applies a blur effect to the background of the container.
+   - `border`: Sets a 2px solid border with a semi-transparent white color.
+   - `border-radius: 20px;`: Rounds the corners of the container.
+   - `padding: 21px;`: Adds padding inside the container.
+   - `position: relative;`: Sets the positioning context for absolutely positioned elements within the container.
+   - `transition: height .3s ease;`: Adds a transition effect to changes in height, with a duration of 0.3 seconds and an easing function of "ease".
+
+Overall, this CSS sets up a visually appealing layout with a background image, centered content, and styled containers with a blur effect and transition animation.
+
+
+
+STEP-2-ADDING A SEARCH BOX TO TYPE THE CITY NAME
+
+.search-box {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.search-box i {
+    position: absolute;
+    font-size: 25px;
+    left: 10px;
+    padding: 0 10px;
+}
+
+.search-box input {
+    position: absolute;
+    flex: 1;
+    width: 100%;
+    height: 90%;
+    background: transparent;
+    border: 2px solid #a05f9c;
+    outline: none;
+    border-radius: 15px;
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 48px 0 43px;
+}
+
+.search-box input::placeholder {
+    color: white;
+    text-transform: capitalize;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: aliceblue;
+    font-size: 21px;
+    padding: 0 30px 0 5px;
+}
+
+ NOW let's break down the CSS code for the `.search-box` class:
+
+1. `.search-box`: Styles applied to elements with the class "search-box".
+
+   - `position: relative;`: Establishes the positioning context for child elements with absolute positioning.
+   - `width: 100%;`: Sets the width of the search box to 100% of its containing element.
+   - `height: 55px;`: Sets the height of the search box to 55 pixels.
+   - `display: flex;`: Configures the search box as a flex container, allowing its children to be flex items.
+   - `align-items: center;`: Aligns the items vertically in the center of the search box.
+   - `border-radius: 30px;`: Rounds the corners of the search box.
+
+2. `.search-box i`: Styles applied to `<i>` elements within elements with the class "search-box".
+
+   - `position: absolute;`: Positions the icon absolutely within its containing element.
+   - `font-size: 25px;`: Sets the font size of the icon to 25 pixels.
+   - `left: 10px;`: Positions the icon 10 pixels from the left edge of its containing element.
+   - `padding: 0 10px;`: Adds padding around the icon.
+
+3. `.search-box input`: Styles applied to `<input>` elements within elements with the class "search-box".
+
+   - `position: absolute;`: Positions the input field absolutely within its containing element.
+   - `flex: 1;`: Allows the input field to grow and fill the available space within the flex container.
+   - `width: 100%;`: Sets the width of the input field to 100% of its containing element.
+   - `height: 90%;`: Sets the height of the input field to 90% of the search box's height.
+   - `background: transparent;`: Sets the background of the input field to transparent.
+   - `border: 2px solid #a05f9c;`: Sets a 2-pixel solid border with a specific color.
+   - `outline: none;`: Removes the default outline style when the input field is focused.
+   - `border-radius: 15px;`: Rounds the corners of the input field.
+   - `font-size: 21px;`: Sets the font size of the text in the input field to 21 pixels.
+   - `font-weight: 500;`: Sets the font weight to 500 (semi-bold).
+   - `text-transform: uppercase;`: Transforms the text to uppercase.
+   - `padding: 0 48px 0 43px;`: Adds padding inside the input field.
+
+4. `.search-box input::placeholder`: Styles applied to the placeholder text in the input field.
+
+   - `color: white;`: Sets the color of the placeholder text to white.
+   - `text-transform: capitalize;`: Capitalizes the placeholder text.
+
+5. `.search-box button`: Styles applied to `<button>` elements within elements with the class "search-box".
+
+   - `position: absolute;`: Positions the button absolutely within its containing element.
+   - `right: 0;`: Positions the button flush against the right edge of its containing element.
+   - `width: 40px;`: Sets the width of the button to 40 pixels.
+   - `height: 60px;`: Sets the height of the button to 60 pixels.
+   - `border: none;`: Removes the border from the button.
+   - `cursor: pointer;`: Changes the cursor to a pointer when hovering over the button.
+   - `background: transparent;`: Sets the background of the button to transparent.
+   - `color: aliceblue;`: Sets the text color of the button to aliceblue.
+   - `font-size: 21px;`: Sets the font size of the text in the button to 21 pixels.
+   - `padding: 0 30px 0 5px;`: Adds padding inside the button.
+
+These styles combine to create a search box with an input field, an icon, and a button, all positioned within a flex container. The input field has specific styling for its appearance and behavior, and the icon and button are positioned absolutely for precise placement within the search box.
+
+
+STEP-3-NOW CREATING-WEATHER BOX-IN WHICH IF WE TYPE SOME OTHER INVALID NAME IT WILL COME AS "NOT FOUND"
+ 
+.weather-box {
+    text-align: center;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column; /* Display children vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.weather-box,
+.weather-info,
+.not-to-be-found{
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+.weather-box.active,
+.weather-info.active,
+.not-to-be-found.active{
+    visibility: visible;
+}
+
+.weather-box .box,
+.weather-info .box{
+    transform: translateY(-110%);
+}
+
+.weather-box.active .box,
+.weather-info.active .box{
+    transform: translateY(0%);
+    transition: transform 3s ease;
+    transition-delay: .3s;
+}
+
+
+
+.weather-box img {
+    width: 85%;
+}
+
+.weather-box .temperature {
+    position: relative;
+    font-size: 64px;
+    line-height:1.5;
+    font-weight: 700;
+    margin: 1px 0 -20px;
+}
+
+.weather-box .temperature span {
+    position: absolute;
+    font-size: 25px;
+    vertical-align: top; /* Align the degree symbol to the top */ margin-left: 4px;
+}
+
+.weather-box .description {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+STEP-4-NOW GIVING TRANSITIONS FOR HUMIDITY AND WIND
+
+.weather-info {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    width: 90%;
+}
+
+.weather-info .humidity,
+.weather-info .wind {
+    display: flex;
+    align-items: center;
+    transform: translateY(-110%) ;
+}
+
+
+.weather-info.active .humidity,
+.weather-info.active .wind {
+    transform: translateY(0%);
+    transition: transform 2s ease;
+    transition-delay: 1.0s;
+}
+
+.weather-info i {
+    font-size: 55px;
+    margin-right: 9px;
+}
+
+.weather-info span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.not-to-be-found img{
+    width: 95%;
+}
+
+.not-to-be-found p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+the CSS code explanation for the `.weather-info` and not found image class:
+
+1. `.weather-info`: Styles applied to elements with the class "weather-info".
+
+   - `display: flex;`: Configures the weather information container as a flex container, allowing its children to be flex items.
+   - `justify-content: space-between;`: Distributes the space between the flex items evenly along the main axis.
+   - `position: absolute;`: Positions the weather information container absolutely within its containing element.
+   - `bottom: 15px;`: Positions the weather information container 15 pixels from the bottom of its containing element.
+   - `width: 90%;`: Sets the width of the weather information container to 90% of its containing element's width.
+
+2. `.weather-info .humidity` and `.weather-info .wind`: Styles applied to elements with the classes "humidity" and "wind" within elements with the class "weather-info".
+
+   - `display: flex;`: Configures the humidity and wind elements as flex containers, allowing their children to be flex items.
+   - `align-items: center;`: Aligns the items vertically in the center of the humidity and wind elements.
+   - `transform: translateY(-110%);`: Initially moves the humidity and wind elements 110% of their own height upwards, effectively hiding them from view.
+
+3. `.weather-info.active .humidity` and `.weather-info.active .wind`: Additional styles applied to elements with the classes "humidity" and "wind" within elements with the class "weather-info" when the "active" class is present on the weather-info container.
+
+   - `transform: translateY(0%);`: Moves the humidity and wind elements back to their original position (0% translation) along the vertical axis.
+   - `transition: transform 2s ease;`: Specifies that the transform property will transition over a duration of 2 seconds with an easing effect.
+   - `transition-delay: 1.0s;`: Delays the start of the transition effect by 1 second.
+
+4. `.weather-info i`: Styles applied to `<i>` elements within elements with the class "weather-info".
+
+   - `font-size: 55px;`: Sets the font size of the icon to 55 pixels.
+   - `margin-right: 9px;`: Adds a right margin of 9 pixels to the icon.
+
+5. `.weather-info span`: Styles applied to `<span>` elements within elements with the class "weather-info".
+
+   - `font-size: 20px;`: Sets the font size of the text to 20 pixels.
+   - `font-weight: 600;`: Sets the font weight to 600 (semi-bold).
+
+
+
+
+
+
+

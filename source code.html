@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Creating a search box like container-->
+    <div class="container">
+        <div class="search-box">
+            <i class='bx bx-map'></i>
+            <input type="text" placeholder="enter your location">
+            <button class="bx bx-search"></button>
+        </div>
+        <!--Creating a search box like container-->
+        <div class="weather-box">
+            <div class="box">
+                <div class="weather-information">
+                    <div class="weather">
+                        <img src="weather images/clouds.png">
+                        <p class="temperature">0<span>°C</span></p>
+                        <p class="description">Clear Clouds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Now giving all the weather details-->
+        <div class="weather-info">
+            <div class="humidity">
+                <i class="bx bx-water"></i>
+                <div class="text">
+                    <div class="humidity-info">
+                        <span>0%</span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="bx bx-wind"></i>
+                <div class="text">
+                    <div class="wind-info">
+                        <span>0 Km/Hr</span>
+                    </div>
+                    <p>Wind</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="not-to-be-found">
+            <div class="box">
+                <img src="weather images/error image.png">
+                <p>OOPS! you followed zoro's location!!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
